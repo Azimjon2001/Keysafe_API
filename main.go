@@ -83,7 +83,6 @@ func getUser(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "User not found", http.StatusNotFound)
 		return
 	} else if err != nil {
-		//log.Println("Error querying the database:", err)
 		http.Error(w, "Error querying the database-1", http.StatusInternalServerError)
 		return
 	}
